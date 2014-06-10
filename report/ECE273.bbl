@@ -10,11 +10,12 @@ Y.~LeCun, L.~Bottou, G.O., Muller, K.:
 \newblock Efficient backprop.
 \newblock Neural Networks: Tricks of the trade (1998)
 
-\bibitem{hanna}
-Wallach, H.M., Murray, I., Salakhutdinov, R., Mimno, D.:
-\newblock Evaluation methods for topic models.
-\newblock In: Proceedings of the 26th Annual International Conference on
-  Machine Learning, ACM (2009)  1105--1112
+\bibitem{theano}
+Bergstra, J., Breuleux, O., Bastien, F., Lamblin, P., Pascanu, R., Desjardins,
+  G., Turian, J., Warde-Farley, D., Bengio, Y.:
+\newblock Theano: a {CPU} and {GPU} math expression compiler.
+\newblock In: Proceedings of the Python for Scientific Computing Conference
+  ({SciPy}). (2010)
 
 \bibitem{gregor}
 Heinrich, G.:

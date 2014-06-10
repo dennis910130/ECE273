@@ -21,24 +21,46 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2}Sub-model Convolutional Network}{1}{section.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Theoretical basis: Convolutional neural network}{1}{subsection.2.1}}
 \citation{backprop}
+\citation{imagenet}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The architecture of our CNN.}}{2}{figure.1}}
 \newlabel{fig1}{{1}{2}{The architecture of our CNN}{figure.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Overall architecture}{2}{subsection.2.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Sub-model combination}{2}{subsection.2.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Dropout and sub-models}{3}{subsection.2.4}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Convex Loss functions}{3}{section.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Cross Entropy}{3}{subsection.3.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Hinge Loss}{3}{subsection.3.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Multiclass Deep Neural Network with Hinge Loss}{4}{subsection.3.3}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}One-Versus-All}{4}{subsubsection.3.3.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}One-Versus-One}{4}{subsubsection.3.3.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Ranking Loss}{4}{subsection.3.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Dropout and sub-model combination}{2}{subsection.2.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Sub-model combination in non-dropout CNN}{4}{subsection.2.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Convex Loss functions}{4}{section.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Cross-entropy}{4}{subsection.3.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Hinge Loss}{4}{subsection.3.2}}
+\citation{theano}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Multiclass Deep Neural Network with Hinge Loss}{5}{subsection.3.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}One-Versus-All}{5}{subsubsection.3.3.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}One-Versus-One}{5}{subsubsection.3.3.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Ranking Loss}{5}{subsection.3.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces  Deep Neural Network with One-Versus-One Hinge Loss}}{6}{figure.2}}
+\newlabel{mcsvm}{{2}{6}{Deep Neural Network with One-Versus-One Hinge Loss}{figure.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{6}{section.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Sub-model convolutional network}{6}{subsection.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}The role of dropout}{6}{subsection.4.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces  Accuracy-number of sub-models.}}{7}{figure.3}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Accuracy-number of sub-models for dropout network}}}{7}{figure.3}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Accuracy-number of sub-models for nondropout network}}}{7}{figure.3}}
+\newlabel{accuracies}{{3}{7}{Accuracy-number of sub-models}{figure.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces  Histograms of sub-models.}}{8}{figure.4}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Histogram of accuracies of sub-models of dropout network}}}{8}{figure.4}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Histogram of accuracies of sub-models of nondropout network}}}{8}{figure.4}}
+\newlabel{hist}{{4}{8}{Histograms of sub-models}{figure.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Convolutional network with different convex loss functions.}{8}{subsection.4.3}}
 \bibstyle{splncs}
 \bibdata{ECE273}
 \bibcite{imagenet}{1}
 \bibcite{backprop}{2}
-\bibcite{hanna}{3}
+\bibcite{theano}{3}
 \bibcite{gregor}{4}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{5}{section.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Sub-model convolutional network}{5}{subsection.4.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Convolutional network with different convex loss functions}{5}{subsection.4.2}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Accuracy of networks}}{9}{table.1}}
+\newlabel{table1}{{1}{9}{Accuracy of networks}{table.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Accuracy of networks}}{9}{table.2}}
+\newlabel{table2}{{2}{9}{Accuracy of networks}{table.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Classification results}{9}{subsubsection.4.3.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}Convergence comparison}{9}{subsubsection.4.3.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{9}{section.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Comparison for different loss functions while training}}{10}{figure.5}}
+\newlabel{conv}{{5}{10}{Comparison for different loss functions while training}{figure.5}{}}

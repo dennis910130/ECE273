@@ -15,7 +15,7 @@
 
 
 
-\title{Convolutional Neural Network and Convex optimization}
+\title{Convolutional Neural Network and Convex Optimization}
 
 
 \author{
@@ -94,7 +94,7 @@ y_{pred}=\textup{argmax}_{i}P(Y=i|x,W,b)
 \end{equation}
 
 \subsection{Overall architecture}
-The overall architecture of our CNN is shown in Figure~\ref{fig1}. There are three convolutional layers and pooling layers alternatively. Overlapping pooling is performed. Each pooling layer consists of a grid of pooling units spaced $s=2$ pixels apart, each summarizing a neighborhood of size $3\times3$ centered at the location of the pooling unit.
+The overall architecture of our CNN is shown in Figure~\ref{fig1}. There are three convolutional layers and pooling layers alternatively. Overlapping pooling is performed. Each pooling layer consists of a grid of pooling units spaced $s=2$ pixels apart, each summarizing a neighborhood of size $3\times3$ centered at the location of the pooling unit. The output of the network is a vector of class membership probability with 10 units, corresponding to 10 classes in our CIFAR-10 dataset\footnote{http://www.cs.toronto.edu/~kriz/cifar.html}.
 
 \begin{figure}
 \centering
@@ -102,45 +102,93 @@ The overall architecture of our CNN is shown in Figure~\ref{fig1}. There are thr
 \caption{The architecture of our CNN.}
 \label{fig1}
 \end{figure}
-\subsection{Sub-model combination}
-Let's focus on the penultimate layer in our CNN architecture (Figure~\ref{fig1}). We refer to the already trained CNN model in Figure~\ref{fig1} as the original model. There are totally 1024 units in the penultimate layer, each of which votes for the class membership probabilities $P(Y=i|x,W,b)$, and the importance of each unit's vote is weighted by $W_{ij}$.  The 1024-unit vector of the penultimate layer is denoted as $h_{orig}$.
-\par
-Now we define a sub-model $m_{i}$ as randomly setting units as zero in the penultimate layer with chance of 50\%, and the remaining units are multiplied by 2:
-\begin{equation}
-P(h_{m_{i}}^{j}=2h_{orig}^{j})=P(h_{m_{i}}^{j}=0)=\frac{1}{2}.
-\end{equation}
-where  $h_{m_{i}}$ is the 1024-unit vector of the sub-model $m_{i}$, and $h_{(\cdot)}^{j}$ is the $j$th element of the vector. 
-\par
-Therefore, the original model can be viewed as a combination of all the possible sub-models:
-\begin{equation}
-h_{orig} = \lim_{n \to \infty }\frac{1}{n}\sum_{i=1}^{n}h_{m_{i}}=E\left [ h_{m_{i}} \right ]
-\end{equation}
-For each sub-model, the class membership probability output is denoted as $P_{m_{i}}$. Rather than combining the penultimate layers $h_{m_{i}}$ of the sub-models, we explore the weighted combination of output layer $P_{m_{i}}$ of sub-models:
-\begin{equation}
-P_{comb} = \sum_{i=1}^{n}l_{i}P_{m_{i}}
-\end{equation}
-where $l_{i}$ is the weight of each model $m_{i}$, and $P_{comb}$ is the class membership probabilities of the weighted combined model.
-\par
-Given a set of sub-models $m_{i}, (i = 1,2, ... ,n)$ extracted from the original model $m_{orig}$, the optimal weight $l_{i}$  can be obtained by the following optimization problem:
-\par
-\setlength{\parindent}{3em}
-minimize $\sum_{i=1}^{N}\left \| l^{t}\cdot P_{i}-y_{i} \right \|_{2}^{2}$
-\setlength{\parindent}{3em}
-subject to $l\succeq 0$
+\subsection{Dropout and sub-model combination}
+Dropout is a recently-introduced technique to reduce overfitting \cite{imagenet}. It consists of setting to zero the output of each hidden neuron with probability of 0.5 in training procedure.  So every time a training example is presented, the neural network samples a different architecture, which we denote here as a sub-model $m_{k}$. All these sub-models share weights. At test time, we use all neurons but multiply their outputs by 0.5, which is an approximation to taking the geometric mean of the predictive distributions $P_{m_{k}}=\left [ P_{m_{k}}(Y=1),P_{m_{k}}(Y=2),...,P_{m_{k}}(Y=d) \right ]^{t}$ produced by the sub-models (where $d$ is the number of classes):
 
-\subsection{Dropout and sub-models}
+\begin{equation}
+\begin{split}
+(P_{m_{1}}(Y=i)\cdot P_{m_{2}}(Y=i)\cdot\cdot \cdot \cdot P_{m_{n}}(Y=i))^{\frac{1}{n}}&=\frac{e^{(b_{i}+W_{i}\frac{1}{n}\sum_{k=1}^{n}h_{m_{k}})}}{(\sum_{j=1}^{d}e^{(nb_{j}+W_{j}\sum_{k=1}^{n}h_{m_{k}})})^{\frac{1}{n}}}
+ \\
+           &= \frac{e^{(b_{i}+W_{i}\cdot h_{comb})}}{(\sum_{j=1}^{d}e^{(nb_{j}+W_{j}\sum_{k=1}^{n}h_{m_{k}})})^{\frac{1}{n}}}
+\end{split}
+\end{equation}
+\begin{equation}
+P_{comb}(Y=i)=\frac{e^{b_{i}+W_{i}\cdot h_{comb}}}{\sum_{j=1}^{d}e^{b_{j}+W_{j}\cdot h_{comb}}}
+\end{equation}
+
+
+
+where $h_{m_{k}}$ is the neurons of the penultimate layer of sub-model $m_{k}$, and $h_{comb}$ is the that of the combined model by using all the neurons but multiply them by 0.5. $P_{comb}(\cdot)$ is the class membership probabilities of the combined model. 
+\par
+Apparently, the predictive distribution of the combined model is only a biased approximation of taking the mean of the predictive distribution of all sub-models.
+\par
+In our experiments, the architecture is shown in Figure~\ref{fig1}, dropout is performed in the output of penultimate layer, and $d=10$ is the number of classes of our dataset.
+\par
+Here, we want to explore a better option of combining the sub-models. Rather than giving an approximation, we want to actually taking the linear combination of the predictive distribution of $n$ sub-models:
+\begin{equation}
+P_{l.comb}(Y=i) = \sum_{k=1}^{n}l_{k}\times P_{m_{k}}(Y=i)
+\end{equation}
+where $l_{k}$ is the weight of the distribution of $k$th model. The best weight $l=\left[ l_{1},l_{2}, ..., l_{n}\right]^{t}$ can be obtained solving following optimization problem:
+\par
+\setlength{\parindent}{3em}
+minimize $\sum_{i=1}^{N}\left \| P_{i}\cdot l-y_{i} \right \|_{2}^{2}$,
+\par
+\setlength{\parindent}{3em}
+subject to $l\succeq 0$.
+\setlength{\parindent}{0pt}
+\par
+with the variable $l$, where $N$ is the number of all the training examples, $y_{i}$ is the $10 \times 1$ binary column vector indicating the true label of $i$th data point, and $P_{i} =\left [ P_{m_{1}},P_{m_{2}},...,P_{m_{n}} \right ] $ is a $10 \times n$ matrix. By minimizing the sum of squared l2 norm of difference between predicted distribution and true label, we find the non-negative weight vector $l$.
+\par
+The objective function can be simplified as following:
+\begin{equation}
+\begin{split}
+\sum_{i=1}^{N}\left \| P_{i}\cdot l-y_{i} \right \|_{2}^{2} &=\sum_{i=1}^{N}(P_{i}\cdot l-y_{i})^{t}(P_{i}\cdot l-y_{i})
+ \\
+&=(P\cdot l-y)^{t}(P\cdot l-y)
+ \\
+&=l^{t}P^{t}Pl-2y^{t}Pl+y^{t}y
+\end{split}
+\end{equation}
+where $y = \left[ y_{1}^{t}, y_{2}^{t},...y_{N}^{t}\right]^{t}$ is the concatenation of label indicator vectors of all data points, which is a $10N\times 1$ vector. $P = \left[ P_{1}^{t},P_{2}^{t},..., P_{n}^{t}\right]^{t}$ is the concatenation of probability distributions of all data points, which is a $10N \times n$  matrix. Then the optimization problem can be written as follow:
+\par
+\setlength{\parindent}{3em}
+minimize $l^{t}P^{t}Pl-2y^{t}Pl+y^{t}y$,
+\par
+\setlength{\parindent}{3em}
+subject to $l\succeq 0$.
+\setlength{\parindent}{0pt}
+\par
+with the variable $l$. This is a Quadratic Optimization Problem (QP), apparently a convex optimization problem, and is easy to solve.
+
+
+
+\subsection{Sub-model combination in non-dropout CNN}
+Now let's move back to CNN without dropout training. The same idea of sub-model combination can also be utilized to improve the performance of CNN when the network is trained without dropout. 
+\par
+The sub-models can be obtained by similar fashion with the dropout sub-models: given the already trained CNN model without dropout, randomly set penultimate units to zero with probability of 50\%, and multiply the remaining units by 2:
+\begin{equation}
+\textup{Pr}(h_{m_{i}}^{j}=2h_{orig}^{j})=\textup{Pr}(h_{m_{i}}^{j}=0)=\frac{1}{2}.
+\end{equation}
+where  $h_{m_{i}}$ is the 1024 penultimate-layer unit vector of the sub-model $m_{i}$, $h_{orig}$ is the 1024-unit vector of the trained CNN model, and $h_{(\cdot)}^{j}$ is the $j$th element of the vector. 
+\par
+Then, we can obtain the predictive distribution of each sub-model $P_{m_{k}}$, and the new model takes linear combination of the predictive distribution of $n$ sub-models, which is the same as the dropout condition:
+\begin{equation}
+P_{l.comb}(Y=i) = \sum_{k=1}^{n}l_{k}\times P_{m_{k}}(Y=i)
+\end{equation}
+\par
+Therefore, the optimization problem is very similar with dropout condition, and the only difference is the multiplication by 2 when obtaining the penultimate layer of sub-models.
 
 
 \section{Convex Loss functions}
 Deep neural network is well-known for its highly non-convexity. But we can still borrow some ideas from the convex optimization literature, where people have found many useful convex loss functions for classification tasks. In this section, we will talk about three different convex loss functions, and discuss how to use them in multiclass classification problem within the deep learning architecture.
 
 
-\subsection{Cross Entropy}
-Cross entropy (CE) is the most standard loss function for neural networks, which is defined by:
+\subsection{Cross-entropy}
+Cross-entropy is the most standard loss function for neural networks, which is defined by:
 \begin{equation}
 H(p,q) = - \sum_{x}p(x)log q(x),
 \end{equation}
-where $p$ and $q$ are ground-truth posterior probability and estimated posterior probability respectively. CE can be directly used for multiclass classfication. This has been discussed in Section 2.1. 
+where $p$ and $q$ are ground-truth posterior probability and estimated posterior probability respectively. Cross-entropy can be directly used for multiclass classfication. This has been discussed in Section 2.1. 
 
 \subsection{Hinge Loss}
 Hinge loss is widely used in Support Vector Machines (SVMs). Given training data and its corresponding labels ($x_{n}$, $y_{n}$), $n=1,...,N$, $x_{n} \in R^{D}$, $t_{n} \in {-1,+1}$, for a binary classification problem, SVMs learning includes the following convex optimization:
@@ -196,8 +244,18 @@ This is the earliest method for SVM multiclass classification. The basic idea is
 these One-Versus-All SVMs. We can also regard this as replacing the softmax and cross-entropy layer with the hinge loss layer. This kind of method works well for problem with a small number of classes. When the class number grows larger, the imbalance between positive and negative samples for each SVM becomes intolerable.
 
 \subsubsection{One-Versus-One}
-The One-Versus-One method is to construct $K(K-1)/2$ classifiers. Each is responsible for one of the $K(K-1)/2$ class pairs. While testing, we simply let all the binary classifiers vote for the most probable one, which is also called the "Max Wins" strategy.To incorporate this method to deep learning architecture, we can first have $K(K-1)/2$ output units, each of which corresponds to one classifier. All of the units use hinge loss. For each training data, only $K-1$ of these units
-are activated. The other units are temperorily cut off. This is illustrated in Fig. The good property here is that for each SVM, the positive and negative training samples are balanced, no matter how many classes there are. However, The number of SVMs needed are quadratic in $K$, which makes it not scalable.
+The One-Versus-One method is to construct $K(K-1)/2$ classifiers. Each is responsible for one of the $K(K-1)/2$ class pairs. While testing, we simply let all the binary classifiers vote for the most probable one, which is also called the ``Max Wins" strategy.To incorporate this method to deep learning architecture, we can have $K(K-1)/2$ output units, each of which corresponds to one classifier. All of the units use hinge loss. For each training data, only $K-1$ of these units
+are activated. The other units are temperorily cut off. This is illustrated in Fig. \ref{mcsvm} 
+\begin{figure}
+\centering 
+\includegraphics[width=0.8\textwidth]{MCSVM.png}
+\caption{ Deep Neural Network with One-Versus-One Hinge Loss}
+\label{mcsvm} 
+\end{figure}
+
+
+
+The good property here is that for each SVM, the positive and negative training samples are balanced, no matter how many classes there are. However, The number of SVMs needed are quadratic in $K$, which makes it not scalable.
 
 \subsection{Ranking Loss}
 Another way to directly model the classification problem is the pairwise-ranking loss. Since we just want to pick the one with the highest linear output at test time. This lead to the following minimization problem:
@@ -205,14 +263,88 @@ Another way to directly model the classification problem is the pairwise-ranking
 Loss = \sum_{n=1}^{N}\sum_{i \in C_{n}^{*}}max(0, 1-f_{j}(x_{n}+f_{i}(x_{n}))),
 \end{equation}
 where $j$ is the label of the $n$th data and $C_{n}^{*}$ indicates the set of all the other labels. This loss can be directly generalized to multilabel predition problem and is widely used in many recommandation systems. 
+
+
+
 \section{Experiments}
 \subsection{Sub-model convolutional network}
+We use Theano\cite{theano} to train and test the CNN model, and cvx toolbox\footnote{http://cvxr.com} in matlab to solve the convex optimization problem finding best weights. The training and test data are CIFAR-10 dataset.
+\par
+We separately train the model with and without dropout, and the the result on the test set is shown in Table~\ref{table1}. Accuracy of dropout network is about 2\% higher than nondropout network, which shows the advantage of dropout method.
+\par
+Then, we randomly extract 4800 sub-models from dropout/non-dropout network respectively, find the optimal weight $l$ by solving the convex optimization problem using different number of sub-models. The plot of the accuracy on test set versus number of sub-models is shown in Figure~\ref{accuracies}. The dotted line in both figures are the accuracy of the original model, which is the approximation of geometric mean of all possible sub-models.
+\par 
+Clearly, the accuracy tend to increase with the number of sub-models used. This is intuitive: the sub-models are chosen randomly, the more sub-models we use, the more probable we have useful sub-models and better combinations. As is shown in Figure~\ref{accuracies}(a), for the model trained by dropout, the improvement is limited: approximately 0.2\% improvement is achieved. However, for network trained without dropout, the improvement by weighted combination of sub-models is much more significant: the accuracy of original model is 79.52\%, and the weighed combination of sub-models is always better than the original model, even when there are only 100 sub-models. The improvement is up to ???? when the number of sub-models reaches to ???.
+\par
+\begin{figure}
+\centering 
+\subfigure[Accuracy-number of sub-models for dropout network]{\includegraphics[width=0.8\textwidth]{dropout.png}} 
+\subfigure[Accuracy-number of sub-models for nondropout network]{\includegraphics[width=0.8\textwidth]{nodropout.png}} 
+\caption{ Accuracy-number of sub-models.}
+\label{accuracies} 
+\end{figure}
 
-\subsection{Convolutional network with different convex loss functions}
-We show the experiment results for using different convex loss functions, including softmax and cross-entropy(SCE), One-Versus-One with hinge loss(1v1HINGE), One-Versus-All with hinge loss(1vaHINGE) and rank loss(RANK). This set of experiments are implemented using Caffe. And the code is released on Si's Github. 
+\subsection{The role of dropout}
+The reason of the lower improvement for dropout network is explained in this section. Dropout trains different sub-model at a time, but the weights are shared by all the sub-models. This procedure forces the network to learn more robust features that are useful for many different random sub-models, and after training, the sub-models in the dropout network can give similar results for all the data. This is the eventual goal of the dropout training. In other words, the sub-models in the dropout network are similar to each other, therefore whatever combination of them would not achieve much improvement. On the other hand, the network trained without dropout doesn't have the invariant property, thus the sub-models are quite different to each other, leading to greater improvement by combining them.
+\par
+Figure~\ref{hist} illustrates this effect of dropout training more clearly. accuracies achieved by 4800 sub-models for nondropout/ dropout network are shown in the two histograms. Clearly, the sub-models of dropout network are much more concentrated than those of the nondropout network. This shows the larger variance of the sub-models in nondropout network.
+\begin{figure}
+\centering 
+\subfigure[Histogram of accuracies of sub-models of dropout network]{\includegraphics[width=0.8\textwidth]{dropout_hist.png}} 
+\subfigure[Histogram of accuracies of sub-models of nondropout network]{\includegraphics[width=0.8\textwidth]{nodropout_hist.png}} 
+\caption{ Histograms of sub-models.}
+\label{hist} 
+\end{figure}
+
+\begin{table}
+\centering 
+    \begin{tabular}{l|l}
+    \hline
+    Network     & Accuracy on test set (\%) \\ \hline
+    Dropout     & 81.540                 \\ \hline
+    Non-dropout & 79.517                 \\ \hline
+    \end{tabular}
+     \caption{Accuracy of networks}   
+     \label{table1}
+\end{table}
+
+\subsection{Convolutional network with different convex loss functions.}
+For this part, we use Caffe to do the experiments. Caffe is the most popular and fastest deep convolutional network implementation for the time being. It provides the cross-entropy loss. For the other loss functions, we implemented by ourself. We are going to compare cross-entropy(CE), One-Versus-All hinge loss(1vsAll-L1), One-Versus-All square hinge loss(1vsALL-L2), One-Versus-One hinge loss(1vs1-L1), rank loss(RANK).
+\subsubsection{Classification results}
+\begin{table}
+\centering 
+    \begin{tabular}{l|l|l}
+    \hline
+    Loss     & Accuracy on test set (\%) & WeightDecay\\ \hline
+    CE     & 77.85  &      750         \\ \hline
+    1vsALL-L1 & 80.25  &   10            \\ \hline
+    1vsALL-L2 &  80.18       &    100         \\ \hline
+    1vs1-L1 &   77.80       &     10         \\ \hline
+    RANK    &   77.60       &    100          \\ \hline
+    \end{tabular}
+     \caption{Accuracy of networks}   
+     \label{table2}
+\end{table}
+Table \ref{table2} shows the results for different loss functions and the corresponding relative weight decay used for the best results. For all of them, we use a similar strategy to train the network. The learning rate is initialized to 0.001. Before reaching the final point, we decrease the learning rate twice(for each time we reduce it by a factor of 10). The results clearly shows that One-Versus-All hinge loss and square hinge loss outperform other methods by a large margin. Due to time limit, all the results shown above is the best from the parameters that we have
+tried. 
+
+\subsubsection{Convergence comparison}
+We also plot the accuracy rate on the validation set for the first 50000 iterations while training(see Fig. \ref{conv}).
+\begin{figure}
+\centering 
+\includegraphics[width=0.8\textwidth]{plot_cnn.png}
+\caption{Comparison for different loss functions while training}
+\label{conv} 
+\end{figure}
+We can find that under the same learning rate(0.001), the One-Versus-All hinge loss and square hinge loss converge the fastest. Cross-entropy gives the smoothest curve.
+
+
+Please note that even though in this dataset One-Versus-All hinge loss seems to outperform cross-entropy by a large margin, it doesn't mean that we can use them as the standard loss in the future. By some preliminary experiments, the One-Versus-All hinge loss doesn't work on CIFAR100, which is a 100 class extention of CIFAR10. Cross-entropy is standard because of its stability. Also, for One-Versus-One hinge loss and rank loss, we can not say for sure that they perform worse than
+the others since the sets of parameters we have tried on them are too limited. This is why many people don't like neural networks. Tuning the parameters is a nightmare. However, we do find that by borrowing ideas from the convex optimization literature, we do see some improvements on some certain tasks. 
 
 
 
+\section{Conclusion}
 
 \bibliographystyle{splncs}
 \bibliography{ECE273}
