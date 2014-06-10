@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  10 JUN 2014 01:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.9.4)  10 JUN 2014 04:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -535,218 +535,49 @@ LaTeX Font Warning: Font shape `OMS/txtt/m/n' undefined
 [1
 
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<architecture.png, id=130, 697.60625pt x 322.20375pt>
+<architecture.png, id=86, 697.60625pt x 322.20375pt>
 File: architecture.png Graphic file (type png)
  <use architecture.png>
 Package pdftex.def Info: architecture.png used on input line 101.
 (pdftex.def)             Requested size: 397.48499pt x 183.5892pt.
 
-[2 <./architecture.png>] [3]
-
-LaTeX Warning: Citation `gabriel' on page 4 undefined on input line 211.
-
-[4] [5]
-
-LaTeX Warning: Citation `finding' on page 6 undefined on input line 269.
-
-[6] <1.png, id=201, 383.031pt x 331.7193pt>
-File: 1.png Graphic file (type png)
- <use 1.png>
-Package pdftex.def Info: 1.png used on input line 293.
-(pdftex.def)             Requested size: 119.2467pt x 103.27228pt.
-
-<2.png, id=202, 430.7292pt x 344.0052pt>
-File: 2.png Graphic file (type png)
- <use 2.png>
-Package pdftex.def Info: 2.png used on input line 294.
-(pdftex.def)             Requested size: 119.2467pt x 95.23422pt.
-
-<3.png, id=203, 381.5856pt x 330.2739pt>
-File: 3.png Graphic file (type png)
- <use 3.png>
-Package pdftex.def Info: 3.png used on input line 295.
-(pdftex.def)             Requested size: 119.2467pt x 103.21033pt.
-
-<4.png, id=204, 367.1316pt x 315.8199pt>
-File: 4.png Graphic file (type png)
- <use 4.png>
-Package pdftex.def Info: 4.png used on input line 296.
-(pdftex.def)             Requested size: 119.2467pt x 102.57759pt.
-
-<5.png, id=205, 440.1243pt x 367.1316pt>
-File: 5.png Graphic file (type png)
- <use 5.png>
-Package pdftex.def Info: 5.png used on input line 297.
-(pdftex.def)             Requested size: 119.2467pt x 99.46857pt.
-
-<6.png, id=206, 368.577pt x 341.1144pt>
-File: 6.png Graphic file (type png)
- <use 6.png>
-Package pdftex.def Info: 6.png used on input line 298.
-(pdftex.def)             Requested size: 119.2467pt x 110.36118pt.
-
-<7.png, id=207, 389.5353pt x 337.5009pt>
-File: 7.png Graphic file (type png)
- <use 7.png>
-Package pdftex.def Info: 7.png used on input line 299.
-(pdftex.def)             Requested size: 119.2467pt x 103.31613pt.
-
-<8.png, id=208, 380.8629pt x 325.215pt>
-File: 8.png Graphic file (type png)
- <use 8.png>
-Package pdftex.def Info: 8.png used on input line 300.
-(pdftex.def)             Requested size: 119.2467pt x 101.82297pt.
-
-<9.png, id=209, 363.5181pt x 311.4837pt>
-File: 9.png Graphic file (type png)
- <use 9.png>
-Package pdftex.def Info: 9.png used on input line 301.
-(pdftex.def)             Requested size: 119.2467pt x 102.17682pt.
-
-<12.png, id=212, 578.16pt x 433.62pt>
-File: 12.png Graphic file (type png)
- <use 12.png>
-Package pdftex.def Info: 12.png used on input line 325.
-(pdftex.def)             Requested size: 158.99156pt x 119.24255pt.
-File: 5.png Graphic file (type png)
- <use 5.png>
-Package pdftex.def Info: 5.png used on input line 326.
-(pdftex.def)             Requested size: 158.99156pt x 132.62663pt.
-
-<10.png, id=213, 396.7623pt x 363.5181pt>
-File: 10.png Graphic file (type png)
- <use 10.png>
-Package pdftex.def Info: 10.png used on input line 327.
-(pdftex.def)             Requested size: 158.99156pt x 145.67091pt.
-
-<11.png, id=214, 344.7279pt x 317.988pt>
-File: 11.png Graphic file (type png)
- <use 11.png>
-Package pdftex.def Info: 11.png used on input line 328.
-(pdftex.def)             Requested size: 158.99156pt x 146.65956pt.
- [7] [8 <./1.png> <./2.png> <./3.png> <./4.png> <./5.png> <./6.png> <./7.png> <
-./8.png> <./9.png>]
-[9 <./12.png> <./10.png> <./11.png>]
-Package epstopdf Info: Source file: <perplex1.eps>
-(epstopdf)                    date: 2014-02-26 19:00:01
-(epstopdf)                    size: 9028 bytes
-(epstopdf)             Output file: <perplex1-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-26 23:22:46
-(epstopdf)                    size: 6516 bytes
-(epstopdf)             Command: <repstopdf --outfile=perplex1-eps-converted-to.
-pdf perplex1.eps>
-(epstopdf)             \includegraphics on input line 355.
-Package epstopdf Info: Output file is already uptodate.
-
-<perplex1-eps-converted-to.pdf, id=265, 562.1pt x 421.575pt>
-File: perplex1-eps-converted-to.pdf Graphic file (type pdf)
-
-<use perplex1-eps-converted-to.pdf>
-Package pdftex.def Info: perplex1-eps-converted-to.pdf used on input line 355.
-(pdftex.def)             Requested size: 317.9892pt x 238.49265pt.
- <13.png, id=270, 445.1832pt x 373.6359pt>
-File: 13.png Graphic file (type png)
-
-<use 13.png>
-Package pdftex.def Info: 13.png used on input line 379.
-(pdftex.def)             Requested size: 158.99156pt x 133.43698pt.
- <14.png, id=271, 379.4175pt x 332.442pt>
-File: 14.png Graphic file (type png)
- <use 14.png>
-Package pdftex.def Info: 14.png used on input line 380.
-(pdftex.def)             Requested size: 158.99156pt x 139.31018pt.
-
-<15.png, id=272, 443.7378pt x 364.2408pt>
-File: 15.png Graphic file (type png)
- <use 15.png>
-Package pdftex.def Info: 15.png used on input line 381.
-(pdftex.def)             Requested size: 158.99156pt x 130.5041pt.
-
-<16.png, id=273, 397.485pt x 287.6346pt>
-File: 16.png Graphic file (type png)
- <use 16.png>
-Package pdftex.def Info: 16.png used on input line 382.
-(pdftex.def)             Requested size: 158.99156pt x 115.05618pt.
- [10 <./perplex1-eps-converted-to.pdf>] [11 <./13.png> <./14.png> <./15.png> <.
-/16.png>]
-<bbc3.png, id=302, 419.166pt x 355.5684pt>
-File: bbc3.png Graphic file (type png)
- <use bbc3.png>
-Package pdftex.def Info: bbc3.png used on input line 417.
-(pdftex.def)             Requested size: 158.99156pt x 134.86781pt.
-
-<bbc4.png, id=303, 422.7795pt x 364.2408pt>
-File: bbc4.png Graphic file (type png)
- <use bbc4.png>
-Package pdftex.def Info: bbc4.png used on input line 418.
-(pdftex.def)             Requested size: 158.99156pt x 136.979pt.
-File: 13.png Graphic file (type png)
- <use 13.png>
-Package pdftex.def Info: 13.png used on input line 419.
-(pdftex.def)             Requested size: 158.99156pt x 133.43698pt.
-
-<bbc6.png, id=304, 447.3513pt x 377.2494pt>
-File: bbc6.png Graphic file (type png)
- <use bbc6.png>
-Package pdftex.def Info: bbc6.png used on input line 420.
-(pdftex.def)             Requested size: 158.99156pt x 134.07701pt.
-Package epstopdf Info: Source file: <perplex2.eps>
-(epstopdf)                    date: 2014-02-27 02:24:09
-(epstopdf)                    size: 9160 bytes
-(epstopdf)             Output file: <perplex2-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-27 02:25:41
-(epstopdf)                    size: 6530 bytes
-(epstopdf)             Command: <repstopdf --outfile=perplex2-eps-converted-to.
-pdf perplex2.eps>
-(epstopdf)             \includegraphics on input line 442.
-Package epstopdf Info: Output file is already uptodate.
-
-<perplex2-eps-converted-to.pdf, id=305, 562.1pt x 421.575pt>
-File: perplex2-eps-converted-to.pdf Graphic file (type pdf)
-
-<use perplex2-eps-converted-to.pdf>
-Package pdftex.def Info: perplex2-eps-converted-to.pdf used on input line 442.
-(pdftex.def)             Requested size: 317.9892pt x 238.49265pt.
- [12 <./bbc3.png> <./bbc4.png> <./bbc6.png>] [13 <./perplex2-eps-converted-to.p
-df>] (./ECE273.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 474.
- [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 474.
+[2 <./architecture.png>] [3] [4] (./ECE273.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 219.
+ [5]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 219.
  (./ECE273.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 474.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 474.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 219.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 219.
 Package rerunfilecheck Info: File `ECE273.out' has not changed.
-(rerunfilecheck)             Checksum: 67CACEA5BB2F53F60E7C5634EE98A114;1879.
+(rerunfilecheck)             Checksum: 8594101B37C06F7C20E450A3E7056456;1138.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 474.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 219.
  ) 
 Here is how much of TeX's memory you used:
- 8691 strings out of 493315
- 122920 string characters out of 6137904
- 237998 words of memory out of 5000000
- 11842 multiletter control sequences out of 15000+600000
- 40893 words of font info for 100 fonts, out of 8000000 for 9000
+ 8441 strings out of 493315
+ 120236 string characters out of 6137905
+ 230998 words of memory out of 5000000
+ 11705 multiletter control sequences out of 15000+600000
+ 28622 words of font info for 70 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 37i,10n,40p,996b,396s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,8n,40p,888b,356s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2013/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive
-/2013/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2013/t
-exmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/2013/texmf-di
-st/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2013/texmf-dist/font
-s/type1/public/txfonts/txtt.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1
-/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times
-/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.p
-fb>
-Output written on ECE273.pdf (14 pages, 1129711 bytes).
+exlive/2013/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/local/texlive/
+2013/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2013/t
+exmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2013/texmf-di
+st/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/2013/texmf-dist/font
+s/type1/public/txfonts/txsy.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1
+/public/txfonts/txsyb.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publi
+c/txfonts/txtt.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/ut
+mb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on ECE273.pdf (5 pages, 201178 bytes).
 PDF statistics:
- 398 PDF objects out of 1000 (max. 8388607)
- 326 compressed objects within 4 object streams
- 116 named destinations out of 1000 (max. 500000)
- 327 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 175 PDF objects out of 1000 (max. 8388607)
+ 154 compressed objects within 2 object streams
+ 43 named destinations out of 1000 (max. 500000)
+ 134 words of extra memory for PDF output out of 10000 (max. 10000000)
 

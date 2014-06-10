@@ -4,24 +4,13 @@
 \BOOKMARK [2][-]{subsection.2.2}{Overall architecture}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.3}{Sub-model combination}{section.2}% 5
 \BOOKMARK [2][-]{subsection.2.4}{Dropout and sub-models}{section.2}% 6
-\BOOKMARK [1][-]{section.3}{Multiclass}{}% 7
-\BOOKMARK [1][-]{section.4}{Experiments}{}% 8
-\BOOKMARK [2][-]{subsection.4.1}{Sub-model convolutional network}{section.4}% 9
-\BOOKMARK [2][-]{subsection.4.2}{Training via collapsed Gibbs sampling}{section.4}% 10
-\BOOKMARK [2][-]{subsection.4.3}{Goodness-of-fit of the model}{section.4}% 11
-\BOOKMARK [3][-]{subsubsection.4.3.1}{Likelihood of held-out data}{subsection.4.3}% 12
-\BOOKMARK [3][-]{subsubsection.4.3.2}{Evaluation of clustering result}{subsection.4.3}% 13
-\BOOKMARK [2][-]{subsection.4.4}{Overfitting monitoring}{section.4}% 14
-\BOOKMARK [1][-]{section.5}{Implementation of algorithm}{}% 15
-\BOOKMARK [1][-]{section.6}{Design of experiments}{}% 16
-\BOOKMARK [2][-]{subsection.6.1}{Datasets}{section.6}% 17
-\BOOKMARK [2][-]{subsection.6.2}{Choice of hyperparameters}{section.6}% 18
-\BOOKMARK [2][-]{subsection.6.3}{Evaluating results}{section.6}% 19
-\BOOKMARK [1][-]{section.7}{Experimental results}{}% 20
-\BOOKMARK [2][-]{subsection.7.1}{Classic400 dataset}{section.7}% 21
-\BOOKMARK [3][-]{subsubsection.7.1.1}{Best hyperparameters}{subsection.7.1}% 22
-\BOOKMARK [3][-]{subsubsection.7.1.2}{Evaluation results}{subsection.7.1}% 23
-\BOOKMARK [2][-]{subsection.7.2}{BBCSport dataset}{section.7}% 24
-\BOOKMARK [3][-]{subsubsection.7.2.1}{Best hyperparameters}{subsection.7.2}% 25
-\BOOKMARK [3][-]{subsubsection.7.2.2}{Evaluation results}{subsection.7.2}% 26
-\BOOKMARK [1][-]{section.8}{Conclusions}{}% 27
+\BOOKMARK [1][-]{section.3}{Convex Loss functions}{}% 7
+\BOOKMARK [2][-]{subsection.3.1}{Cross Entropy}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.2}{Hinge Loss}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.3}{Multiclass Deep Neural Network with Hinge Loss}{section.3}% 10
+\BOOKMARK [3][-]{subsubsection.3.3.1}{One-Versus-All}{subsection.3.3}% 11
+\BOOKMARK [3][-]{subsubsection.3.3.2}{One-Versus-One}{subsection.3.3}% 12
+\BOOKMARK [2][-]{subsection.3.4}{Ranking Loss}{section.3}% 13
+\BOOKMARK [1][-]{section.4}{Experiments}{}% 14
+\BOOKMARK [2][-]{subsection.4.1}{Sub-model convolutional network}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.2}{Convolutional network with different convex loss functions}{section.4}% 16
