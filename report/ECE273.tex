@@ -51,7 +51,9 @@ University of California San Diego\\
 
 Deep learning is a new area of machine learning research, which is recently be of interests of more and more researchers and organizations. Convolutional neural networks (CNNs) are a special kind of deep learning method, and it is particularly useful in field of computer vision. CNNs have achieved state of the art performance on many challenging computer vision contests, which brings CNNs a lot of attention.
 \par
-Despite deep learning's great success on performance, there are always criticisms and concerns about this method. One of them are that it is not a convex problem. In this project, we try to improve the CNNs architecture using convex optimization methods from two perspective: modifying the last two layers of the network by making a linear combination of many sub-models; and replacing the original loss function by convex loss functions.
+Despite deep learning's great success on performance, there are always criticisms and concerns about this method. One of them are that it is not a convex problem. However, for convex problem, the models are usually too restricted to be powerful. Non-convex models are much harder to train, but almost none of the state of the art performance is achieved by purely convex optimization. So there is always a trade of between ``easy-to-use" and ``powerful". \par
+In this project, we try to answer this question: can we make use of convex optimization techniques to improve the highly nonconvex deep neural network? We decomposite the CNNs to several locally convex components and improve the their performance using convex optimization methods from two perspective: modifying the last two layers of the network by making a linear combination of many sub-models; and replacing the original loss function by other loss functions from the convex
+optimization community.
 
 
 %Latent Dirichlet allocation introduced by \cite{blei} is a generative probabilistic model for collection of discrete data, such as text corpora.It assumes each word is a mixture over an underlying set of topics, and each topic is a mixture over a set of topic probabilities. Evaluating the models is a tough issue. There are several types of methods that people use: The models can be applied to some tasks such as document classification, where the performance can be easily evaluated; Several methods estimate the likelihood of held-out documents; Subjective judgement can be made by examine word and document similarities. In this project, we learn the models of two datasets, Classic400 and BBCSport dataset, by collapsed Gibbs sampling, and use several methods to evaluate the models, including perplexity, VI-distance, visualizing result and highest-probability words.
@@ -205,7 +207,7 @@ Hinge loss is widely used in Support Vector Machines (SVMs). Given training data
 Hinge loss, while doesn't have a clear probability interpretation as CE, can be regarded as a maximum margin objective function, and it can be directly used in the deep learning architecture by deriving the corresponding unconstraint optimization problem:
 \begin{equation}
 \begin{array}{rrclcl}
-\displaystyle \min_{w} & \multicolumn{3}{l}{ \frac{1}{2}w^{T}w+C\sum_{n=1}^{N}max(1-w^{T}x_{n}t_{n},0)}\\
+\displaystyle \min_{w} & \multicolumn{3}{l}{ \frac{1}{2}w^{T}w+C\sum_{n=1}^{N}\textbf{max}(1-w^{T}x_{n}t_{n},0)}\\
 
 \end{array}
 \end{equation}
@@ -219,7 +221,7 @@ which is fast to compute.
 
 Another similar loss function is the squared hinge loss:
 \begin{equation}
-\sum_{n=1}^{N}max(1-w^{T}x_{n}t_{n},0)^{2},
+\sum_{n=1}^{N}\textbf{max}(1-w^{T}x_{n}t_{n},0)^{2},
 \end{equation}
 which is also differentiable and easy to compute. It imposes a bigger loss for points which violate the margin.
 
@@ -257,7 +259,7 @@ The good property here is that for each SVM, the positive and negative training 
 \subsection{Ranking Loss}
 Another way to directly model the classification problem is the pairwise-ranking loss. Since we just want to pick the one with the highest linear output at test time. This leads to the following minimization problem:
 \begin{equation}
-\textup{Loss} = \sum_{n=1}^{N}\sum_{i \in C_{n}^{*}}max(0, 1-f_{j}(x_{n}+f_{i}(x_{n}))),
+\textup{Loss} = \sum_{n=1}^{N}\sum_{i \in C_{n}^{*}}\textbf{max}(0, 1-f_{j}(x_{n})+f_{i}(x_{n})),
 \end{equation}
 where $j$ is the label of the $n$th data and $C_{n}^{*}$ indicates the set of all the other labels. This loss can be directly generalized to multilabel predition problem and is widely used in many recommandation systems. 
 
