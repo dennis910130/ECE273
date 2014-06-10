@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  10 JUN 2014 11:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  10 JUN 2014 11:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -538,37 +538,37 @@ LaTeX Font Warning: Font shape `OMS/txtt/m/n' undefined
 <architecture.png, id=111, 697.60625pt x 322.20375pt>
 File: architecture.png Graphic file (type png)
  <use architecture.png>
-Package pdftex.def Info: architecture.png used on input line 104.
+Package pdftex.def Info: architecture.png used on input line 97.
 (pdftex.def)             Requested size: 397.48499pt x 183.5892pt.
 
 [2 <./architecture.png>] [3] [4]
 <MCSVM.png, id=146, 1153.30875pt x 593.21625pt>
 File: MCSVM.png Graphic file (type png)
  <use MCSVM.png>
-Package pdftex.def Info: MCSVM.png used on input line 255.
+Package pdftex.def Info: MCSVM.png used on input line 248.
 (pdftex.def)             Requested size: 317.9892pt x 163.55588pt.
  [5] [6 <./MCSVM.png>] <dropout.png, id=173, 562.1pt x 421.575pt>
 File: dropout.png Graphic file (type png)
  <use dropout.png>
-Package pdftex.def Info: dropout.png used on input line 288.
+Package pdftex.def Info: dropout.png used on input line 281.
 (pdftex.def)             Requested size: 317.9892pt x 238.49265pt.
 
 <nodropout.png, id=174, 562.1pt x 421.575pt>
 File: nodropout.png Graphic file (type png)
  <use nodropout.png>
-Package pdftex.def Info: nodropout.png used on input line 289.
+Package pdftex.def Info: nodropout.png used on input line 282.
 (pdftex.def)             Requested size: 317.9892pt x 238.49265pt.
 
 <dropout_hist.png, id=176, 562.1pt x 421.575pt>
 File: dropout_hist.png Graphic file (type png)
  <use dropout_hist.png>
-Package pdftex.def Info: dropout_hist.png used on input line 300.
+Package pdftex.def Info: dropout_hist.png used on input line 293.
 (pdftex.def)             Requested size: 317.9892pt x 238.49265pt.
 
 <nodropout_hist.png, id=177, 562.1pt x 421.575pt>
 File: nodropout_hist.png Graphic file (type png)
  <use nodropout_hist.png>
-Package pdftex.def Info: nodropout_hist.png used on input line 301.
+Package pdftex.def Info: nodropout_hist.png used on input line 294.
 (pdftex.def)             Requested size: 317.9892pt x 238.49265pt.
 
 [7] [8 <./dropout.png (PNG copy)> <./nodropout.png (PNG copy)>] [9 <./dropout_h
@@ -576,26 +576,23 @@ ist.png (PNG copy)> <./nodropout_hist.png (PNG copy)>]
 <plot_cnn.png, id=200, 765.86125pt x 612.2875pt>
 File: plot_cnn.png Graphic file (type png)
  <use plot_cnn.png>
-Package pdftex.def Info: plot_cnn.png used on input line 342.
+Package pdftex.def Info: plot_cnn.png used on input line 335.
 (pdftex.def)             Requested size: 317.9892pt x 254.22537pt.
 
 (./ECE273.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 358.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 351.
  [10 <./plot_cnn.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 358.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 351.
  (./ECE273.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 358.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 358.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 351.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 351.
 Package rerunfilecheck Info: File `ECE273.out' has not changed.
 (rerunfilecheck)             Checksum: 44E6DE521ACCC1D86F7C7A8C63F122D3;1602.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 358.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 351.
  ) 
 Here is how much of TeX's memory you used:
  8541 strings out of 493315
@@ -615,7 +612,7 @@ s/type1/public/txfonts/txsy.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1
 c/txfonts/txtt.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/ut
 mb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
 /usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ECE273.pdf (10 pages, 939438 bytes).
+Output written on ECE273.pdf (10 pages, 939619 bytes).
 PDF statistics:
  260 PDF objects out of 1000 (max. 8388607)
  227 compressed objects within 3 object streams
