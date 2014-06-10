@@ -1,20 +1,22 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Sub-model Convolutional Network}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Theoretical basis: Convolutional neural network}{section.2}% 3
+\BOOKMARK [1][-]{section.2}{Convolutional Neural Networks}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Theoretical basis: Convolutional neural networks}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{Overall architecture}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{Dropout and sub-model combination}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.4}{Sub-model combination in non-dropout CNN}{section.2}% 6
-\BOOKMARK [1][-]{section.3}{Convex Loss functions}{}% 7
-\BOOKMARK [2][-]{subsection.3.1}{Cross-entropy}{section.3}% 8
-\BOOKMARK [2][-]{subsection.3.2}{Hinge Loss}{section.3}% 9
-\BOOKMARK [2][-]{subsection.3.3}{Multiclass Deep Neural Network with Hinge Loss}{section.3}% 10
-\BOOKMARK [3][-]{subsubsection.3.3.1}{One-Versus-All}{subsection.3.3}% 11
-\BOOKMARK [3][-]{subsubsection.3.3.2}{One-Versus-One}{subsection.3.3}% 12
-\BOOKMARK [2][-]{subsection.3.4}{Ranking Loss}{section.3}% 13
-\BOOKMARK [1][-]{section.4}{Experiments}{}% 14
-\BOOKMARK [2][-]{subsection.4.1}{Sub-model convolutional network}{section.4}% 15
-\BOOKMARK [2][-]{subsection.4.2}{The role of dropout}{section.4}% 16
-\BOOKMARK [2][-]{subsection.4.3}{Convolutional network with different convex loss functions.}{section.4}% 17
-\BOOKMARK [3][-]{subsubsection.4.3.1}{Classification results}{subsection.4.3}% 18
-\BOOKMARK [3][-]{subsubsection.4.3.2}{Convergence comparison}{subsection.4.3}% 19
-\BOOKMARK [1][-]{section.5}{Conclusion}{}% 20
+\BOOKMARK [1][-]{section.3}{Sub-model Convolutional Network}{}% 5
+\BOOKMARK [2][-]{subsection.3.1}{Dropout and sub-model combination}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.2}{Sub-model combination in non-dropout CNN}{section.3}% 7
+\BOOKMARK [1][-]{section.4}{Convex Loss functions}{}% 8
+\BOOKMARK [2][-]{subsection.4.1}{Cross-entropy}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.2}{Hinge Loss}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.3}{Multiclass Deep Neural Network with Hinge Loss}{section.4}% 11
+\BOOKMARK [3][-]{subsubsection.4.3.1}{One-Versus-All}{subsection.4.3}% 12
+\BOOKMARK [3][-]{subsubsection.4.3.2}{One-Versus-One}{subsection.4.3}% 13
+\BOOKMARK [2][-]{subsection.4.4}{Ranking Loss}{section.4}% 14
+\BOOKMARK [1][-]{section.5}{Experiments}{}% 15
+\BOOKMARK [2][-]{subsection.5.1}{Sub-model convolutional network}{section.5}% 16
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Sub-model combination results}{subsection.5.1}% 17
+\BOOKMARK [2][-]{subsection.5.2}{The role of dropout}{section.5}% 18
+\BOOKMARK [2][-]{subsection.5.3}{Convolutional network with different convex loss functions}{section.5}% 19
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Classification results}{subsection.5.3}% 20
+\BOOKMARK [3][-]{subsubsection.5.3.2}{Convergence comparison}{subsection.5.3}% 21
+\BOOKMARK [1][-]{section.6}{Conclusion}{}% 22
