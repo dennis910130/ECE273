@@ -1,0 +1,751 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  9 JUN 2014 19:57
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**LDA.tex
+(./LDA.tex
+LaTeX2e <2011/06/27>
+Babel <3.9f> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(./nips13submit_e.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2010/10/06 v2.0c eso-pic (RN)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+\Gread@gobject=\count87
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
+\nipsrulerbox=\box26
+\nipsrulercount=\count88
+\nipsruleroffset=\dimen103
+\cv@lineheight=\dimen104
+\cv@boxheight=\dimen105
+\cv@tmpbox=\box27
+\cv@refno=\count89
+\cv@tot=\count90
+\cv@tmpc@=\count91
+\cv@tmpc=\count92
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package hobsub Info: Skipping package `atbegshi' (already loaded).
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen106
+\Hy@linkcounter=\count93
+\Hy@pagecounter=\count94
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count95
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count96
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen107
+\Fld@menulength=\count97
+\Field@Width=\dimen108
+\Fld@charsize=\dimen109
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count98
+\c@Item=\count99
+\c@Hfootnote=\count100
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count101
+\c@bookmark@seq@number=\count102
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip43
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+\Gin@req@height=\dimen110
+\Gin@req@width=\dimen111
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count103
+\lst@gtempboxa=\box28
+\lst@token=\toks15
+\lst@length=\count104
+\lst@currlwidth=\dimen112
+\lst@column=\count105
+\lst@pos=\count106
+\lst@lostspace=\dimen113
+\lst@width=\dimen114
+\lst@newlines=\count107
+\lst@lineno=\count108
+\lst@maxwidth=\dimen115
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count109
+\lst@skipnumbers=\count110
+\lst@framebox=\box29
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen116
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen117
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count111
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count112
+\leftroot@=\count113
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count114
+\DOTSCASE@=\count115
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box30
+\strutbox@=\box31
+\big@size=\dimen118
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count116
+\c@MaxMatrixCols=\count117
+\dotsspace@=\muskip11
+\c@parentequation=\count118
+\dspbrk@lvl=\count119
+\tag@help=\toks17
+\row@=\count120
+\column@=\count121
+\maxfields@=\count122
+\andhelp@=\toks18
+\eqnshift@=\dimen119
+\alignsep@=\dimen120
+\tagshift@=\dimen121
+\tagwidth@=\dimen122
+\totwidth@=\dimen123
+\lineht@=\dimen124
+\@envbody=\toks19
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/txfonts.sty
+Package: txfonts 2008/01/22 v3.2.1
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 21.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/txr/m/n on input line 21.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/txr/m/n on input line 21.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/txr/m/n --> OT1/txr/bx/n on input line 22.
+\symitalic=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `italic' in version `bold'
+(Font)                  OT1/txr/m/it --> OT1/txr/bx/it on input line 26.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/txr/bx/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/txr/bx/n on input line 29.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 30.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/txr/m/it on input line 30.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/txr/m/it on input line 30.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/txr/m/it --> OT1/txr/bx/it on input line 31.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 40.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/txss/m/n on input line 40.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/txss/m/n on input line 40.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/txss/m/n --> OT1/txss/b/n on input line 41.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 50.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/txtt/m/n on input line 50.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/txtt/m/n on input line 50.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/txtt/m/n --> OT1/txtt/b/n on input line 51.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 58.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/txmi/m/it on input line 58.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/txmi/m/it on input line 58.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/txmi/m/it --> OML/txmi/bx/it on input line 59.
+\symlettersA=\mathgroup5
+LaTeX Font Info:    Overwriting symbol font `lettersA' in version `bold'
+(Font)                  U/txmia/m/it --> U/txmia/bx/it on input line 67.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 77.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/txsy/m/n on input line 77.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/txsy/m/n on input line 77.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/txsy/m/n --> OMS/txsy/bx/n on input line 78.
+\symAMSa=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
+(Font)                  U/txsya/m/n --> U/txsya/bx/n on input line 94.
+\symAMSb=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `AMSb' in version `bold'
+(Font)                  U/txsyb/m/n --> U/txsyb/bx/n on input line 103.
+\symsymbolsC=\mathgroup8
+LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `bold'
+(Font)                  U/txsyc/m/n --> U/txsyc/bx/n on input line 113.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 120.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/txex/m/n on input line 120.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/txex/m/n on input line 120.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/txex/m/n --> OMX/txex/bx/n on input line 121.
+\symlargesymbolsA=\mathgroup9
+LaTeX Font Info:    Overwriting symbol font `largesymbolsA' in version `bold'
+(Font)                  U/txexa/m/n --> U/txexa/bx/n on input line 129.
+LaTeX Info: Redefining \not on input line 1043.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip47
+\subfigcapskip=\skip48
+\subfigcaptopadj=\dimen125
+\subfigbottomskip=\skip49
+\subfigcapmargin=\dimen126
+\subfiglabelskip=\skip50
+\c@subfigure=\count123
+\c@lofdepth=\count124
+\c@subtable=\count125
+\c@lotdepth=\count126
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2013/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip51
+\subfig@bottom=\skip52
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup10
+) (./LDA.aux)
+\openout1 = `LDA.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 41.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 41.
+
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/omltxmi.fd
+File: omltxmi.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 41.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 41.
+
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/omstxsy.fd
+File: omstxsy.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 41.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 41.
+
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/omxtxex.fd
+File: omxtxex.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 41.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 41.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/utxexa.fd
+File: utxexa.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 41.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/ot1txr.fd
+File: ot1txr.fd 2000/12/15 v3.1
+)
+\AtBeginShipoutBox=\box32
+
+(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count127
+\scratchdimen=\dimen127
+\scratchbox=\box33
+\nofMPsegments=\count128
+\nofMParguments=\count129
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count130
+\MPscratchDim=\dimen128
+\MPnumerator=\count131
+\makeMPintoPDFobject=\count132
+\everyMPtoPDFconversion=\toks22
+)
+Package hyperref Info: Link coloring OFF on input line 41.
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count133
+)
+LaTeX Info: Redefining \ref on input line 41.
+LaTeX Info: Redefining \pageref on input line 41.
+LaTeX Info: Redefining \nameref on input line 41.
+
+(./LDA.out) (./LDA.out)
+\@outlinefile=\write3
+\openout3 = `LDA.out'.
+
+\c@lstlisting=\count134
+LaTeX Font Info:    Try loading font information for U+txmia on input line 45.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/utxmia.fd
+File: utxmia.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Try loading font information for U+txsya on input line 45.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/utxsya.fd
+File: utxsya.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 45.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/utxsyb.fd
+File: utxsyb.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 45.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/utxsyc.fd
+File: utxsyc.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 45.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 45.
+
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/ot1txtt.fd
+File: ot1txtt.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Try loading font information for OMS+txtt on input line 45.
+
+LaTeX Font Info:    No file OMStxtt.fd. on input line 45.
+
+
+LaTeX Font Warning: Font shape `OMS/txtt/m/n' undefined
+(Font)              using `OMS/txsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 45.
+
+[1
+
+{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2] [3] [4] <1.png, id=155, 383.031pt x 331.7193pt>
+File: 1.png Graphic file (type png)
+ <use 1.png>
+Package pdftex.def Info: 1.png used on input line 225.
+(pdftex.def)             Requested size: 119.2467pt x 103.27228pt.
+
+<2.png, id=157, 430.7292pt x 344.0052pt>
+File: 2.png Graphic file (type png)
+ <use 2.png>
+Package pdftex.def Info: 2.png used on input line 226.
+(pdftex.def)             Requested size: 119.2467pt x 95.23422pt.
+
+<3.png, id=158, 381.5856pt x 330.2739pt>
+File: 3.png Graphic file (type png)
+ <use 3.png>
+Package pdftex.def Info: 3.png used on input line 227.
+(pdftex.def)             Requested size: 119.2467pt x 103.21033pt.
+
+<4.png, id=159, 367.1316pt x 315.8199pt>
+File: 4.png Graphic file (type png)
+ <use 4.png>
+Package pdftex.def Info: 4.png used on input line 228.
+(pdftex.def)             Requested size: 119.2467pt x 102.57759pt.
+
+<5.png, id=160, 440.1243pt x 367.1316pt>
+File: 5.png Graphic file (type png)
+ <use 5.png>
+Package pdftex.def Info: 5.png used on input line 229.
+(pdftex.def)             Requested size: 119.2467pt x 99.46857pt.
+
+<6.png, id=161, 368.577pt x 341.1144pt>
+File: 6.png Graphic file (type png)
+ <use 6.png>
+Package pdftex.def Info: 6.png used on input line 230.
+(pdftex.def)             Requested size: 119.2467pt x 110.36118pt.
+
+<7.png, id=162, 389.5353pt x 337.5009pt>
+File: 7.png Graphic file (type png)
+ <use 7.png>
+Package pdftex.def Info: 7.png used on input line 231.
+(pdftex.def)             Requested size: 119.2467pt x 103.31613pt.
+
+<8.png, id=163, 380.8629pt x 325.215pt>
+File: 8.png Graphic file (type png)
+ <use 8.png>
+Package pdftex.def Info: 8.png used on input line 232.
+(pdftex.def)             Requested size: 119.2467pt x 101.82297pt.
+
+<9.png, id=164, 363.5181pt x 311.4837pt>
+File: 9.png Graphic file (type png)
+ <use 9.png>
+Package pdftex.def Info: 9.png used on input line 233.
+(pdftex.def)             Requested size: 119.2467pt x 102.17682pt.
+
+<12.png, id=167, 578.16pt x 433.62pt>
+File: 12.png Graphic file (type png)
+ <use 12.png>
+Package pdftex.def Info: 12.png used on input line 257.
+(pdftex.def)             Requested size: 158.99156pt x 119.24255pt.
+File: 5.png Graphic file (type png)
+ <use 5.png>
+Package pdftex.def Info: 5.png used on input line 258.
+(pdftex.def)             Requested size: 158.99156pt x 132.62663pt.
+
+<10.png, id=168, 396.7623pt x 363.5181pt>
+File: 10.png Graphic file (type png)
+ <use 10.png>
+Package pdftex.def Info: 10.png used on input line 259.
+(pdftex.def)             Requested size: 158.99156pt x 145.67091pt.
+
+<11.png, id=169, 344.7279pt x 317.988pt>
+File: 11.png Graphic file (type png)
+ <use 11.png>
+Package pdftex.def Info: 11.png used on input line 260.
+(pdftex.def)             Requested size: 158.99156pt x 146.65956pt.
+ [5] [6 <./1.png> <./2.png> <./3.png> <./4.png> <./5.png> <./6.png> <./7.png> <
+./8.png> <./9.png>]
+[7 <./12.png> <./10.png> <./11.png>]
+Package epstopdf Info: Source file: <perplex1.eps>
+(epstopdf)                    date: 2014-02-26 19:00:01
+(epstopdf)                    size: 9028 bytes
+(epstopdf)             Output file: <perplex1-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-02-26 23:22:46
+(epstopdf)                    size: 6516 bytes
+(epstopdf)             Command: <repstopdf --outfile=perplex1-eps-converted-to.
+pdf perplex1.eps>
+(epstopdf)             \includegraphics on input line 287.
+Package epstopdf Info: Output file is already uptodate.
+
+<perplex1-eps-converted-to.pdf, id=223, 562.1pt x 421.575pt>
+File: perplex1-eps-converted-to.pdf Graphic file (type pdf)
+
+<use perplex1-eps-converted-to.pdf>
+Package pdftex.def Info: perplex1-eps-converted-to.pdf used on input line 287.
+(pdftex.def)             Requested size: 317.9892pt x 238.49265pt.
+ <13.png, id=228, 445.1832pt x 373.6359pt>
+File: 13.png Graphic file (type png)
+
+<use 13.png>
+Package pdftex.def Info: 13.png used on input line 311.
+(pdftex.def)             Requested size: 158.99156pt x 133.43698pt.
+ <14.png, id=229, 379.4175pt x 332.442pt>
+File: 14.png Graphic file (type png)
+ <use 14.png>
+Package pdftex.def Info: 14.png used on input line 312.
+(pdftex.def)             Requested size: 158.99156pt x 139.31018pt.
+
+<15.png, id=230, 443.7378pt x 364.2408pt>
+File: 15.png Graphic file (type png)
+ <use 15.png>
+Package pdftex.def Info: 15.png used on input line 313.
+(pdftex.def)             Requested size: 158.99156pt x 130.5041pt.
+
+<16.png, id=231, 397.485pt x 287.6346pt>
+File: 16.png Graphic file (type png)
+ <use 16.png>
+Package pdftex.def Info: 16.png used on input line 314.
+(pdftex.def)             Requested size: 158.99156pt x 115.05618pt.
+
+<bbc3.png, id=234, 419.166pt x 355.5684pt>
+File: bbc3.png Graphic file (type png)
+ <use bbc3.png>
+Package pdftex.def Info: bbc3.png used on input line 349.
+(pdftex.def)             Requested size: 158.99156pt x 134.86781pt.
+
+<bbc4.png, id=235, 422.7795pt x 364.2408pt>
+File: bbc4.png Graphic file (type png)
+ <use bbc4.png>
+Package pdftex.def Info: bbc4.png used on input line 350.
+(pdftex.def)             Requested size: 158.99156pt x 136.979pt.
+File: 13.png Graphic file (type png)
+ <use 13.png>
+Package pdftex.def Info: 13.png used on input line 351.
+(pdftex.def)             Requested size: 158.99156pt x 133.43698pt.
+
+<bbc6.png, id=236, 447.3513pt x 377.2494pt>
+File: bbc6.png Graphic file (type png)
+ <use bbc6.png>
+Package pdftex.def Info: bbc6.png used on input line 352.
+(pdftex.def)             Requested size: 158.99156pt x 134.07701pt.
+ [8 <./perplex1-eps-converted-to.pdf>] [9 <./13.png> <./14.png> <./15.png> <./1
+6.png>]
+Package epstopdf Info: Source file: <perplex2.eps>
+(epstopdf)                    date: 2014-02-27 02:24:09
+(epstopdf)                    size: 9160 bytes
+(epstopdf)             Output file: <perplex2-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-02-27 02:25:41
+(epstopdf)                    size: 6530 bytes
+(epstopdf)             Command: <repstopdf --outfile=perplex2-eps-converted-to.
+pdf perplex2.eps>
+(epstopdf)             \includegraphics on input line 374.
+Package epstopdf Info: Output file is already uptodate.
+
+<perplex2-eps-converted-to.pdf, id=263, 562.1pt x 421.575pt>
+File: perplex2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use perplex2-eps-converted-to.pdf>
+Package pdftex.def Info: perplex2-eps-converted-to.pdf used on input line 374.
+(pdftex.def)             Requested size: 317.9892pt x 238.49265pt.
+ [10 <./bbc3.png> <./bbc4.png> <./bbc6.png>] [11 <./perplex2-eps-converted-to.p
+df>] (./LDA.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 406.
+ [12]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 406.
+ (./LDA.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 406.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 406.
+
+
+Package rerunfilecheck Warning: File `LDA.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `LDA.out':
+(rerunfilecheck)             Before: BA100D7DFBD0CA0101A19911C7C9A4C3;1461
+(rerunfilecheck)             After:  B24F4952034DA9CF8799A7E28633737E;1618.
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 406.
+ ) 
+Here is how much of TeX's memory you used:
+ 8666 strings out of 493315
+ 122543 string characters out of 6137904
+ 236998 words of memory out of 5000000
+ 11830 multiletter control sequences out of 15000+600000
+ 40893 words of font info for 100 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 37i,10n,40p,993b,425s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{subsubsection.2.3.2} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.2.3.1} has been referenced but does n
+ot exist, replaced by a fixed one
+
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
+live/2013/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2
+013/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2013/tex
+mf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/2013/texmf-dist
+/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2013/texmf-dist/fonts/
+type1/public/txfonts/txtt.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/u
+rw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/u
+tmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
+>
+Output written on LDA.pdf (12 pages, 995201 bytes).
+PDF statistics:
+ 352 PDF objects out of 1000 (max. 8388607)
+ 285 compressed objects within 3 object streams
+ 104 named destinations out of 1000 (max. 500000)
+ 274 words of extra memory for PDF output out of 10000 (max. 10000000)
+

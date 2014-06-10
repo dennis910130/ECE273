@@ -1,0 +1,23 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Multimodel Convolutional Network}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Convolutional neural network}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Sub-models combination}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Dropout and sub-models}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Training via collapsed Gibbs sampling}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.5}{Goodness-of-fit of the model}{section.2}% 7
+\BOOKMARK [3][-]{subsubsection.2.5.1}{Likelihood of held-out data}{subsection.2.5}% 8
+\BOOKMARK [3][-]{subsubsection.2.5.2}{Evaluation of clustering result}{subsection.2.5}% 9
+\BOOKMARK [2][-]{subsection.2.6}{Overfitting monitoring}{section.2}% 10
+\BOOKMARK [1][-]{section.3}{Implementation of algorithm}{}% 11
+\BOOKMARK [1][-]{section.4}{Design of experiments}{}% 12
+\BOOKMARK [2][-]{subsection.4.1}{Datasets}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.2}{Choice of hyperparameters}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.3}{Evaluating results}{section.4}% 15
+\BOOKMARK [1][-]{section.5}{Experimental results}{}% 16
+\BOOKMARK [2][-]{subsection.5.1}{Classic400 dataset}{section.5}% 17
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Best hyperparameters}{subsection.5.1}% 18
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Evaluation results}{subsection.5.1}% 19
+\BOOKMARK [2][-]{subsection.5.2}{BBCSport dataset}{section.5}% 20
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Best hyperparameters}{subsection.5.2}% 21
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Evaluation results}{subsection.5.2}% 22
+\BOOKMARK [1][-]{section.6}{Conclusions}{}% 23

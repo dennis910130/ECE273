@@ -1,0 +1,30 @@
+\begin{thebibliography}{1}
+
+\bibitem{blei}
+Blei, D.M., Ng, A.Y., Jordan, M.I.:
+\newblock Latent dirichlet allocation.
+\newblock J. Mach. Learn. Res. \textbf{3} (2003)  993--1022
+
+\bibitem{hanna}
+Wallach, H.M., Murray, I., Salakhutdinov, R., Mimno, D.:
+\newblock Evaluation methods for topic models.
+\newblock In: Proceedings of the 26th Annual International Conference on
+  Machine Learning, ACM (2009)  1105--1112
+
+\bibitem{gabriel}
+Doyle, G., Elkan, C.:
+\newblock Accounting for burstiness in topic models.
+\newblock In: Proceedings of the 26th Annual International Conference on
+  Machine Learning, ACMv (2009)  281--288
+
+\bibitem{gregor}
+Heinrich, G.:
+\newblock Parameter estimation for text analysis.
+\newblock Technical report (2004)
+
+\bibitem{finding}
+Griffiths, T.L., Steyvers, M.:
+\newblock Finding scientific topics.
+\newblock Proceedings of the National Academy of Sciences (2004)
+
+\end{thebibliography}

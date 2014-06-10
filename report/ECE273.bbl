@@ -1,0 +1,24 @@
+\begin{thebibliography}{1}
+
+\bibitem{imagenet}
+Krizhevsky, A., Sutskever, I., Hinton, G.E.:
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In: Advances in Neural Information Processing Systems. (2012)
+
+\bibitem{backprop}
+Y.~LeCun, L.~Bottou, G.O., Muller, K.:
+\newblock Efficient backprop.
+\newblock Neural Networks: Tricks of the trade (1998)
+
+\bibitem{hanna}
+Wallach, H.M., Murray, I., Salakhutdinov, R., Mimno, D.:
+\newblock Evaluation methods for topic models.
+\newblock In: Proceedings of the 26th Annual International Conference on
+  Machine Learning, ACM (2009)  1105--1112
+
+\bibitem{gregor}
+Heinrich, G.:
+\newblock Parameter estimation for text analysis.
+\newblock Technical report (2004)
+
+\end{thebibliography}
