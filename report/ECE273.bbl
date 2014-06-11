@@ -10,16 +10,16 @@ Y.~LeCun, L.~Bottou, G.O., Muller, K.:
 \newblock Efficient backprop.
 \newblock Neural Networks: Tricks of the trade (1998)
 
+\bibitem{svm}
+Tang, Y.:
+\newblock Deep learning with linear support vector machines.
+\newblock In: In Workshop on Representational Learning, ICML 2013. (2013)
+
 \bibitem{theano}
 Bergstra, J., Breuleux, O., Bastien, F., Lamblin, P., Pascanu, R., Desjardins,
   G., Turian, J., Warde-Farley, D., Bengio, Y.:
 \newblock Theano: a {CPU} and {GPU} math expression compiler.
 \newblock In: Proceedings of the Python for Scientific Computing Conference
   ({SciPy}). (2010)
-
-\bibitem{gregor}
-Heinrich, G.:
-\newblock Parameter estimation for text analysis.
-\newblock Technical report (2004)
 
 \end{thebibliography}

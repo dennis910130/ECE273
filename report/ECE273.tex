@@ -47,11 +47,13 @@ University of California San Diego\\
 %Latent Dirichlet allocation(LDA) is a generative topic model to find latent topics in a text corpus. It can be trained via collapsed Gibbs sampling. In this project, we train LDA models on two datasets, Classic400 and BBCSport dataset. We discuss possible ways to evaluate goodness-of-fit and to detect overfitting problem of LDA model, and we use these criteria to choose proper hyperparameters, observe convergence, and evaluate the models, the criteria we use include perplexity, VI-distance, visualization of clustering results, and highest-probability words. 
 
 \end{abstract}
+This report shows that the performance of deep convolutional neural network can be        improved by incorporating convex optimization techniques. First, we find that the sub-models learned by dropout can be more effectively combined by solving a convex problem.   Also, we generalize this idea to models that are not trained by dropout. Compared to      traditional methods, we get an improvement of 0.22\% and 0.76\% test accuracy on CIFAR10  dataset. Second, we investigate the performance for different loss functions borrowed     from the convex optimization community and find that selecting loss
+ functions matters a lot. We also implement a novel loss based on the idea of One-Versus- One SVM, which has never been explored in the literature. Experiment shows that it can    give performance comparable to the standard cross-entropy loss, without being fully       tuned.
 \section{Introduction}
 
-Deep learning is a new area of machine learning research, which is recently be of interests of more and more researchers and organizations. Convolutional neural networks (CNNs) are a special kind of deep learning method, and it is particularly useful in field of computer vision. CNNs have achieved state of the art performance on many challenging computer vision contests, which brings CNNs a lot of attention.
+Deep learning is a new area of machine learning research, which is recently of interests to more and more researchers and organizations. Convolutional neural networks (CNNs) are a special kind of deep learning method, and it is particularly useful in field of computer vision. CNNs have achieved state of the art performance on many challenging computer vision contests, which brings CNNs a lot of attention.
 \par
-Despite deep learning's great success on performance, there are always criticisms and concerns about this method. One of them are that it is not a convex problem. However, for convex problem, the models are usually too restricted to be powerful. Non-convex models are much harder to train, but almost none of the state of the art performance is achieved by purely convex optimization. So there is always a trade of between ``easy-to-use" and ``powerful". \par
+Despite deep learning's great success on performance, there are always criticisms and concerns about this method. One of them are that it is not a convex problem. However, for convex problem, the models are usually too restricted to be powerful. Non-convex models are much harder to train, but almost none of the state of the art performance is achieved by purely convex optimization. So there is always a trade off between ``easy-to-use" and ``powerful". \par
 In this project, we try to answer this question: can we make use of convex optimization techniques to improve the highly nonconvex deep neural network? We decomposite the CNNs to several locally convex components and improve the their performance using convex optimization methods from two perspective: modifying the last two layers of the network by making a linear combination of many sub-models; and replacing the original loss function by other loss functions from the convex
 optimization community.
 
@@ -150,7 +152,7 @@ The objective function can be simplified as following:
 &=l^{t}P^{t}Pl-2y^{t}Pl+y^{t}y
 \end{split}
 \end{equation}
-where $y = \left[ y_{1}^{t}, y_{2}^{t},...y_{N}^{t}\right]^{t}$ is the concatenation of label indicator vectors of all data points, which is a $10N\times 1$ vector. $P = \left[ P_{1}^{t},P_{2}^{t},..., P_{n}^{t}\right]^{t}$ is the concatenation of probability distributions of all data points, which is a $10N \times n$  matrix. Then the optimization problem can be written as follow:
+where $y = \left[ y_{1}^{t}, y_{2}^{t},...y_{N}^{t}\right]^{t}$ is the concatenation of label indicator vectors of all data points, which is a $10N\times 1$ vector. $P = \left[ P_{1}^{t},P_{2}^{t},..., P_{N}^{t}\right]^{t}$ is the concatenation of probability distributions of all data points, which is a $10N \times n$  matrix. Then the optimization problem can be written as follow:
 \begin{equation}
 \begin{array}{rrclcl}
 \displaystyle \min_{l} & \multicolumn{3}{l}{l^{t}P^{t}Pl-2y^{t}Pl+y^{t}y}\\
@@ -184,7 +186,7 @@ For both dropout network and non-dropout network, we expect improvement in perfo
 \section{Convex Loss functions}
 Section 3 uses convex optimization for finding optimal combination of sub-models in CNN, while this section seeks to utilize convex optimization technique in deep learning from another perspective: focusing on alternatives of loss functions.
 \par
-Deep neural network is well-known for its high non-convexity. However, we can still borrow some ideas from the convex optimization literature, where people have found many useful convex loss functions for classification tasks. In this section, we will talk about three different convex loss functions, and discuss how to use them in multiclass classification problem within the deep learning architecture.
+Deep neural network is well-known for its high non-convexity. However, we can still borrow some ideas from the convex optimization literature\cite{svm}, where people have found many useful convex loss functions for classification tasks. In this section, we will talk about three different convex loss functions, and discuss how to use them in multiclass classification problem within the deep learning architecture.
 
 
 \subsection{Cross-entropy}
@@ -272,11 +274,11 @@ In this section, we use Theano\cite{theano} to train and test the CNN model, and
 \subsubsection{Sub-model combination results}
 We separately train the two networks with and without dropout, and the the results on the test set are shown in Table~\ref{table1}, this is the baseline of our experiments in this section.  For both networks, the learning rate is initialized to 0.001. Before reaching the final point, we decrease the learning rate twice(for each time we reduce it by a factor of 10).  Accuracy of dropout network is about 2\% higher than nondropout network, which shows the advantage of dropout method.
 \par
-Then, we randomly extract 4800 sub-models from dropout/non-dropout network respectively, and use different number of sub-models to obtain the combined model. For each combined model, we find the optimal weight $l$ by solving the convex optimization problem. The plot of the accuracy on test set versus number of sub-models is shown in Figure~\ref{accuracies}. The dotted line in both sub-figures are the accuracy of the original model, which is the approximation of geometric mean of all possible sub-models. We use this accuracy as a baseline.
+Then, we randomly extract 4500 sub-models from dropout/non-dropout network respectively, and use different number of sub-models to obtain the combined model. For each combined model, we find the optimal weight $l$ by solving the convex optimization problem. The plot of the accuracy on test set versus number of sub-models is shown in Figure~\ref{accuracies}. The dotted line in both sub-figures are the accuracy of the original model, which is the approximation of geometric mean of all possible sub-models. We use this accuracy as a baseline.
 \par 
 For both networks, our sub-model CNNs outperform the original networks when the number of sub-models is large enough. Clearly, the accuracy tends to increase with the number of sub-models used. This is intuitive: the sub-models are chosen randomly; therefore the more sub-models we use, the more probable we have useful sub-models and better combinations. 
 \par
-There is one concern though: As is shown in Figure~\ref{accuracies}(a), for the network trained by dropout, the improvement is limited: approximately 0.2\% improvement is achieved. On the other hand, for network trained without dropout, the improvement by weighted combination of sub-models is much more significant: the accuracy of original model is 79.52\%, and the weighed combination of sub-models is always better than the original model, even when there are only 100 sub-models. The improvement is up to ???? when the number of sub-models reaches to ???.
+There is one concern though: As is shown in Figure~\ref{accuracies}(a), for the network trained by dropout, the improvement is limited: the maximum accuracy achieved is 81.76\%, which is 0.22\% improvement from the baseline. On the other hand, for network trained without dropout, the improvement by weighted combination of sub-models is much more significant: the accuracy of original model is 79.52\%, and the weighed combination of sub-models is always much better than the original model, even when there are only 100 sub-models. The improvement is up to 0.76\% when the number of sub-models reaches to 3000. This is a non-trivial improvement from the original network.
 \par
 \begin{figure}
 \centering 
@@ -289,7 +291,7 @@ There is one concern though: As is shown in Figure~\ref{accuracies}(a), for the 
 \subsection{The role of dropout}
 The reason of the lower improvement for dropout network is explained in this section. Dropout trains different sub-model at a time, but the weights are shared by all the sub-models. This procedure forces the network to learn more robust features that are useful for many different random sub-models, and after training, the sub-models in the dropout network can give similar results for all the data. This is the eventual goal of the dropout training. In other words, the sub-models in the dropout network are similar to each other, therefore whatever combination of them would not achieve much improvement. On the other hand, the network trained without dropout doesn't have the invariant property, thus the sub-models are quite different to each other, leading to greater improvement by combining them.
 \par
-Figure~\ref{hist} illustrates this invariance effect of dropout training more clearly. Accuracy achieved by each of 4800 sub-models for non-dropout/ dropout network is shown in the two histograms. Clearly, the sub-models of dropout network are much more concentrated than those of the non-dropout network. This shows the larger invariance of the sub-models in non-dropout network.
+Figure~\ref{hist} illustrates this invariance effect of dropout training more clearly. Accuracy achieved by each of 4500 sub-models for non-dropout/ dropout network is shown in the two histograms. Clearly, the sub-models of dropout network are much more concentrated than those of the non-dropout network. This shows the larger invariance of the sub-models in non-dropout network.
 \begin{figure}
 \centering 
 \subfigure[Histogram of accuracies of sub-models of dropout network]{\includegraphics[width=0.8\textwidth]{dropout_hist.png}} 
@@ -347,6 +349,7 @@ the others since the sets of parameters we have tried on them are too limited. T
 
 
 \section{Conclusion}
+In this project, we explore two possible improvement of the Convolutional Neural Network architecture by using convex optimization methods:  1) Rather than taking the approximate geometric mean of the predictive distributions of all sub-models, we find an optimal linear combination of many sub-models. This modification improve the performance of both networks trained with and without dropout. We also discuss the role of dropout training in the formation of sub-models, and the reason why sub-model combination of dropout network yield less significant improvement; 2) We compare three different convex loss functions of the network, and provide our own implementation of utilizing these loss functions into multiclass classification problem.
 
 \bibliographystyle{splncs}
 \bibliography{ECE273}

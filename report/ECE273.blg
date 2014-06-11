@@ -3,49 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: ECE273.aux
 The style file: splncs.bst
 Database file #1: ECE273.bib
-Warning--I didn't find a database entry for "hanna"
-Warning--I didn't find a database entry for "gabriel"
-Warning--I didn't find a database entry for "finding"
-Warning--empty institution in gregor
 You've used 4 entries,
             2043 wiz_defined-function locations,
-            503 strings with 4351 characters,
-and the built_in function-call counts, 825 in all, are:
-= -- 63
+            501 strings with 4388 characters,
+and the built_in function-call counts, 879 in all, are:
+= -- 69
 > -- 52
 < -- 0
 + -- 19
 - -- 15
 * -- 54
-:= -- 136
-add.period$ -- 6
+:= -- 138
+add.period$ -- 7
 call.type$ -- 4
-change.case$ -- 5
+change.case$ -- 4
 chr.to.int$ -- 0
-cite$ -- 5
-duplicate$ -- 43
-empty$ -- 87
+cite$ -- 4
+duplicate$ -- 49
+empty$ -- 100
 format.name$ -- 15
-if$ -- 186
+if$ -- 206
 int.to.chr$ -- 0
 int.to.str$ -- 4
-missing$ -- 3
+missing$ -- 4
 newline$ -- 23
 num.names$ -- 4
-pop$ -- 21
+pop$ -- 25
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 18
+skip$ -- 20
 stack$ -- 0
 substring$ -- 0
-swap$ -- 9
+swap$ -- 11
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
+warning$ -- 0
 while$ -- 4
 width$ -- 5
 write$ -- 42
-(There were 4 warnings)
